@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 import logging
 
+from scipy import stats
+
 def clean_weather_data(data):
     """Clean weather data and transform them into DataFrame"""
     weather_list = data['list']
@@ -27,3 +29,33 @@ def detect_outliers_iqr(df, column):
     df_clean = df[(df[column] >= lower_bound) & (df[column] <= upper_bound)]
     
     return df_clean
+
+def detect_outliers_zscore(df, column, threshold=3):
+    """Use Z-score algorithm"""
+    z_scores = stats.zscore(df[column])
+    abs_z_scores = np.abs(z_scores)
+    df_clean = df[abs_z_scores < threshold]
+    
+    return df_clean
+
+def detect_outliers_mad(df, column, threshold=3):
+    """Use mad algorithm"""
+    median = np.median(df[column])
+    mad = np.median(np.abs(df[column] - median))
+    modified_z_scores = 0.6745 * (df[column] - median) / mad
+    
+    df_clean = df[np.abs(modified_z_scores) < threshold]
+    
+    return df_clean
+
+def detect_outliers(df, column, method="iqr", threshold=3):
+
+    if method == "iqr":
+        return detect_outliers_iqr(df, column)
+    elif method == "zscore":
+        return detect_outliers_zscore(df, column, threshold)
+    elif method == "mad":
+        return detect_outliers_mad(df, column, threshold)
+    else:
+        logging.error(f"Undefined method: {method}")
+        return df  
