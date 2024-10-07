@@ -1,0 +1,117 @@
+{"datetime":1728280800000,"temperature":12.63,"humidity":91,"city":"London"}
+{"datetime":1728291600000,"temperature":14.28,"humidity":84,"city":"London"}
+{"datetime":1728302400000,"temperature":17.54,"humidity":63,"city":"London"}
+{"datetime":1728313200000,"temperature":17.96,"humidity":57,"city":"London"}
+{"datetime":1728324000000,"temperature":15.11,"humidity":81,"city":"London"}
+{"datetime":1728334800000,"temperature":14.2,"humidity":89,"city":"London"}
+{"datetime":1728345600000,"temperature":13.88,"humidity":92,"city":"London"}
+{"datetime":1728356400000,"temperature":13.21,"humidity":92,"city":"London"}
+{"datetime":1728367200000,"temperature":12.93,"humidity":92,"city":"London"}
+{"datetime":1728378000000,"temperature":14.06,"humidity":88,"city":"London"}
+{"datetime":1728388800000,"temperature":16.87,"humidity":71,"city":"London"}
+{"datetime":1728399600000,"temperature":16.65,"humidity":71,"city":"London"}
+{"datetime":1728410400000,"temperature":14.7,"humidity":81,"city":"London"}
+{"datetime":1728421200000,"temperature":14.6,"humidity":83,"city":"London"}
+{"datetime":1728432000000,"temperature":13.85,"humidity":87,"city":"London"}
+{"datetime":1728442800000,"temperature":14.04,"humidity":82,"city":"London"}
+{"datetime":1728453600000,"temperature":12.53,"humidity":91,"city":"London"}
+{"datetime":1728464400000,"temperature":13.06,"humidity":89,"city":"London"}
+{"datetime":1728475200000,"temperature":16.13,"humidity":71,"city":"London"}
+{"datetime":1728486000000,"temperature":16.01,"humidity":70,"city":"London"}
+{"datetime":1728496800000,"temperature":14.67,"humidity":79,"city":"London"}
+{"datetime":1728507600000,"temperature":13.13,"humidity":81,"city":"London"}
+{"datetime":1728518400000,"temperature":12.08,"humidity":82,"city":"London"}
+{"datetime":1728529200000,"temperature":10.71,"humidity":81,"city":"London"}
+{"datetime":1728540000000,"temperature":9.72,"humidity":80,"city":"London"}
+{"datetime":1728550800000,"temperature":9.23,"humidity":77,"city":"London"}
+{"datetime":1728561600000,"temperature":9.04,"humidity":78,"city":"London"}
+{"datetime":1728572400000,"temperature":7.89,"humidity":82,"city":"London"}
+{"datetime":1728583200000,"temperature":7.63,"humidity":86,"city":"London"}
+{"datetime":1728594000000,"temperature":7.72,"humidity":81,"city":"London"}
+{"datetime":1728604800000,"temperature":6.54,"humidity":82,"city":"London"}
+{"datetime":1728615600000,"temperature":6.09,"humidity":83,"city":"London"}
+{"datetime":1728626400000,"temperature":6.04,"humidity":79,"city":"London"}
+{"datetime":1728637200000,"temperature":7.71,"humidity":60,"city":"London"}
+{"datetime":1728648000000,"temperature":10.53,"humidity":42,"city":"London"}
+{"datetime":1728658800000,"temperature":10.94,"humidity":41,"city":"London"}
+{"datetime":1728669600000,"temperature":9.27,"humidity":54,"city":"London"}
+{"datetime":1728680400000,"temperature":8.16,"humidity":62,"city":"London"}
+{"datetime":1728691200000,"temperature":7.19,"humidity":68,"city":"London"}
+{"datetime":1728702000000,"temperature":6.46,"humidity":74,"city":"London"}
+{"datetime":1728280800000,"temperature":18.66,"humidity":69,"city":"New York"}
+{"datetime":1728291600000,"temperature":18.21,"humidity":76,"city":"New York"}
+{"datetime":1728302400000,"temperature":17.26,"humidity":86,"city":"New York"}
+{"datetime":1728313200000,"temperature":18.99,"humidity":68,"city":"New York"}
+{"datetime":1728324000000,"temperature":22.36,"humidity":39,"city":"New York"}
+{"datetime":1728334800000,"temperature":21.59,"humidity":37,"city":"New York"}
+{"datetime":1728345600000,"temperature":18.71,"humidity":44,"city":"New York"}
+{"datetime":1728356400000,"temperature":16.32,"humidity":50,"city":"New York"}
+{"datetime":1728367200000,"temperature":14.62,"humidity":53,"city":"New York"}
+{"datetime":1728378000000,"temperature":13.63,"humidity":53,"city":"New York"}
+{"datetime":1728388800000,"temperature":13.22,"humidity":56,"city":"New York"}
+{"datetime":1728399600000,"temperature":17.03,"humidity":39,"city":"New York"}
+{"datetime":1728410400000,"temperature":20.11,"humidity":29,"city":"New York"}
+{"datetime":1728421200000,"temperature":20.21,"humidity":31,"city":"New York"}
+{"datetime":1728432000000,"temperature":18.61,"humidity":38,"city":"New York"}
+{"datetime":1728442800000,"temperature":16.53,"humidity":42,"city":"New York"}
+{"datetime":1728453600000,"temperature":14.8,"humidity":46,"city":"New York"}
+{"datetime":1728464400000,"temperature":13.73,"humidity":49,"city":"New York"}
+{"datetime":1728475200000,"temperature":13.28,"humidity":50,"city":"New York"}
+{"datetime":1728486000000,"temperature":16.72,"humidity":35,"city":"New York"}
+{"datetime":1728496800000,"temperature":20.62,"humidity":30,"city":"New York"}
+{"datetime":1728507600000,"temperature":20.77,"humidity":27,"city":"New York"}
+{"datetime":1728518400000,"temperature":18.84,"humidity":39,"city":"New York"}
+{"datetime":1728529200000,"temperature":18.38,"humidity":45,"city":"New York"}
+{"datetime":1728540000000,"temperature":16.37,"humidity":50,"city":"New York"}
+{"datetime":1728550800000,"temperature":14.27,"humidity":51,"city":"New York"}
+{"datetime":1728561600000,"temperature":11.41,"humidity":55,"city":"New York"}
+{"datetime":1728572400000,"temperature":13.9,"humidity":40,"city":"New York"}
+{"datetime":1728583200000,"temperature":17.32,"humidity":29,"city":"New York"}
+{"datetime":1728594000000,"temperature":17.68,"humidity":30,"city":"New York"}
+{"datetime":1728604800000,"temperature":14.65,"humidity":40,"city":"New York"}
+{"datetime":1728615600000,"temperature":12.79,"humidity":46,"city":"New York"}
+{"datetime":1728626400000,"temperature":10.65,"humidity":52,"city":"New York"}
+{"datetime":1728637200000,"temperature":10.18,"humidity":53,"city":"New York"}
+{"datetime":1728648000000,"temperature":10.03,"humidity":54,"city":"New York"}
+{"datetime":1728658800000,"temperature":13.36,"humidity":44,"city":"New York"}
+{"datetime":1728669600000,"temperature":16.87,"humidity":33,"city":"New York"}
+{"datetime":1728680400000,"temperature":17.6,"humidity":38,"city":"New York"}
+{"datetime":1728691200000,"temperature":17.04,"humidity":42,"city":"New York"}
+{"datetime":1728702000000,"temperature":15.47,"humidity":45,"city":"New York"}
+{"datetime":1728313200000,"temperature":24.48,"humidity":54,"city":"Tokyo"}
+{"datetime":1728324000000,"temperature":21.9,"humidity":80,"city":"Tokyo"}
+{"datetime":1728334800000,"temperature":21.12,"humidity":78,"city":"Tokyo"}
+{"datetime":1728345600000,"temperature":20.61,"humidity":80,"city":"Tokyo"}
+{"datetime":1728356400000,"temperature":19.63,"humidity":80,"city":"Tokyo"}
+{"datetime":1728367200000,"temperature":18.27,"humidity":83,"city":"Tokyo"}
+{"datetime":1728378000000,"temperature":17.05,"humidity":81,"city":"Tokyo"}
+{"datetime":1728388800000,"temperature":16.75,"humidity":82,"city":"Tokyo"}
+{"datetime":1728399600000,"temperature":17.15,"humidity":83,"city":"Tokyo"}
+{"datetime":1728410400000,"temperature":16.57,"humidity":86,"city":"Tokyo"}
+{"datetime":1728421200000,"temperature":16.24,"humidity":86,"city":"Tokyo"}
+{"datetime":1728432000000,"temperature":16.02,"humidity":87,"city":"Tokyo"}
+{"datetime":1728442800000,"temperature":16.8,"humidity":81,"city":"Tokyo"}
+{"datetime":1728453600000,"temperature":18.45,"humidity":70,"city":"Tokyo"}
+{"datetime":1728464400000,"temperature":18.64,"humidity":74,"city":"Tokyo"}
+{"datetime":1728475200000,"temperature":18.26,"humidity":73,"city":"Tokyo"}
+{"datetime":1728486000000,"temperature":17.94,"humidity":72,"city":"Tokyo"}
+{"datetime":1728496800000,"temperature":17.57,"humidity":73,"city":"Tokyo"}
+{"datetime":1728507600000,"temperature":16.64,"humidity":73,"city":"Tokyo"}
+{"datetime":1728518400000,"temperature":18.11,"humidity":62,"city":"Tokyo"}
+{"datetime":1728529200000,"temperature":19.63,"humidity":63,"city":"Tokyo"}
+{"datetime":1728540000000,"temperature":20.19,"humidity":56,"city":"Tokyo"}
+{"datetime":1728550800000,"temperature":18.99,"humidity":55,"city":"Tokyo"}
+{"datetime":1728561600000,"temperature":17.55,"humidity":57,"city":"Tokyo"}
+{"datetime":1728572400000,"temperature":16.63,"humidity":58,"city":"Tokyo"}
+{"datetime":1728583200000,"temperature":16.32,"humidity":58,"city":"Tokyo"}
+{"datetime":1728594000000,"temperature":16.02,"humidity":60,"city":"Tokyo"}
+{"datetime":1728604800000,"temperature":18.26,"humidity":51,"city":"Tokyo"}
+{"datetime":1728615600000,"temperature":21.06,"humidity":42,"city":"Tokyo"}
+{"datetime":1728626400000,"temperature":22.75,"humidity":39,"city":"Tokyo"}
+{"datetime":1728637200000,"temperature":20.58,"humidity":55,"city":"Tokyo"}
+{"datetime":1728648000000,"temperature":19.61,"humidity":62,"city":"Tokyo"}
+{"datetime":1728658800000,"temperature":18.96,"humidity":65,"city":"Tokyo"}
+{"datetime":1728669600000,"temperature":18.49,"humidity":67,"city":"Tokyo"}
+{"datetime":1728680400000,"temperature":18.31,"humidity":66,"city":"Tokyo"}
+{"datetime":1728691200000,"temperature":19.84,"humidity":58,"city":"Tokyo"}
+{"datetime":1728702000000,"temperature":21.8,"humidity":48,"city":"Tokyo"}

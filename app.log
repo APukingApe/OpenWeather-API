@@ -16,3 +16,4 @@ ERROR:root:API Visit failure: 401 Client Error: Unauthorized for url: https://ap
 ERROR:root:Unable to generate report
 ERROR:root:API Visit failure: 404 Client Error: Not Found for url: https://api.openweathermap.org/data/2.5/forecast?q=help&appid=a1576d5b4ef4d0d3d8c50886d4be5535&units=metric
 ERROR:root:未能获取 help 的天气数据
+WARNING:matplotlib.legend:No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
