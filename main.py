@@ -1,10 +1,10 @@
 import argparse
 import logging
 
+import folium
 from matplotlib import pyplot as plt
 from api_service import fetch_weather_data
 from data_cleaning import clean_weather_data, detect_outliers
-from plot_weather_on_map import plot_weather_on_map
 from report_generator import export_to_csv, export_to_excel, export_to_json, generate_pdf_report, generate_report, generate_comparison_report
 from config import CITIES
 
@@ -66,6 +66,8 @@ def analyze_cities(report_type, output_format='all', cities=None):
     if output_format in ['json', 'all']:
         export_to_json(df_dict, cities)
 
+    if output_format in ['map', 'all']:
+        analyze_cities_with_map(cities)
 
 
 def generate_report(df_dict, report_type):
@@ -84,17 +86,16 @@ def generate_report(df_dict, report_type):
     
     plt.show()
 
-def analyze_multiple_cities_with_map():
+def analyze_cities_with_map(cities):
     city_data = []
 
-    for city in CITIES:
-        weather_data = fetch_weather_data(city)
+    city_data = []
 
+    for city in cities:
+        weather_data = fetch_weather_data(city)
         if weather_data:
             df = clean_weather_data(weather_data)
-
             if df is not None:
-                # Assume OpenWeatherMap API returns city data
                 city_lat = weather_data['city']['coord']['lat']
                 city_lon = weather_data['city']['coord']['lon']
                 temperature = df['temperature'].mean()  
@@ -108,8 +109,20 @@ def analyze_multiple_cities_with_map():
                     "humidity": humidity
                 })
 
-    plot_weather_on_map(city_data)
+    map_center = [city_data[0]['lat'], city_data[0]['lon']]  # 以第一个城市为中心
+    weather_map = folium.Map(location=map_center, zoom_start=3)
 
+    for city_info in city_data:
+        city_name = city_info['city']
+        lat = city_info['lat']
+        lon = city_info['lon']
+        popup_info = f"{city_name}: Temperature: {city_info['temperature']}°C, Humidity: {city_info['humidity']}%"
+        folium.Marker([lat, lon], popup=popup_info).add_to(weather_map)
+
+
+    map_filename = f"weather_map_{'_'.join(cities)}.html"
+    weather_map.save(map_filename)
+    print(f"Map Saved as : {map_filename}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Weather Data Analysis Tool")
@@ -132,8 +145,8 @@ if __name__ == "__main__":
     parser.add_argument(
         '--format',
         type=str,
-        choices=['pdf', 'csv', 'excel', 'json', 'all'],
-        help='Specify the output file format: pdf, csv, excel, json or all.',
+        choices=['pdf', 'csv', 'excel', 'json', 'map', 'all'],
+        help='Specify the output file format: pdf, csv, excel, json, map or all.',
         default='all'
     )
 
