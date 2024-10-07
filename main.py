@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 from api_service import fetch_weather_data
 from data_cleaning import clean_weather_data, detect_outliers
 from plot_weather_on_map import plot_weather_on_map
-from report_generator import export_combined_to_csv, export_combined_to_excel, export_combined_to_json, export_to_csv, export_to_excel, export_to_json, generate_combined_pdf_report, generate_pdf_report, generate_report, generate_comparison_report
+from report_generator import export_to_csv, export_to_excel, export_to_json, generate_pdf_report, generate_report, generate_comparison_report
 from config import CITIES
 
 logging.basicConfig(filename='app.log', level=logging.INFO)
@@ -20,26 +20,26 @@ def analyze_city(city, report_type, output_format):
         if report_type in ['temperature', 'all']:
             df_clean_temp = detect_outliers(df, 'temperature', method='iqr')
             if output_format in ['pdf', 'all']:
-                generate_combined_pdf_report({city: df_clean_temp}, 'temperature')
+                generate_pdf_report({city: df_clean_temp}, 'temperature')
             if output_format in ['csv', 'all']:
-                export_combined_to_csv({city: df_clean_temp})
+                export_to_csv({city: df_clean_temp})
             if output_format in ['excel', 'all']:
-                export_combined_to_excel({city: df_clean_temp})
+                export_to_excel({city: df_clean_temp})
             if output_format in ['json', 'all']:
-                export_combined_to_json({city: df_clean_temp})
+                export_to_json({city: df_clean_temp})
         else:
             df_clean_temp = df  
 
         if report_type in ['humidity', 'all']:
             df_clean_humidity = detect_outliers(df_clean_temp, 'humidity', method='mad')
             if output_format in ['pdf', 'all']:
-                generate_combined_pdf_report({city: df_clean_humidity}, 'humidity')
+                generate_pdf_report({city: df_clean_humidity}, 'humidity')
 
     else:
         logging.error(f"Unable to fetch {city} weather report")
 
 
-def analyze_multiple_cities(report_type, output_format='all', cities=None):
+def analyze_cities(report_type, output_format='all', cities=None):
     df_dict = {}
 
     for city in cities:
@@ -53,22 +53,22 @@ def analyze_multiple_cities(report_type, output_format='all', cities=None):
 
     if output_format in ['pdf', 'all']:
         if report_type in ['temperature', 'all']:
-            generate_combined_pdf_report(df_dict, 'temperature', f'temperature_report_{"_".join(cities)}.pdf', cities)
+            generate_pdf_report(df_dict, 'temperature', f'temperature_report_{"_".join(cities)}.pdf', cities)
         if report_type in ['humidity', 'all']:
-            generate_combined_pdf_report(df_dict, 'humidity', f'humidity_report_{"_".join(cities)}.pdf', cities)
+            generate_pdf_report(df_dict, 'humidity', f'humidity_report_{"_".join(cities)}.pdf', cities)
 
     if output_format in ['csv', 'all']:
-        export_combined_to_csv(df_dict, cities)
+        export_to_csv(df_dict, cities)
 
     if output_format in ['excel', 'all']:
-        export_combined_to_excel(df_dict, cities)
+        export_to_excel(df_dict, cities)
 
     if output_format in ['json', 'all']:
-        export_combined_to_json(df_dict, cities)
+        export_to_json(df_dict, cities)
 
 
 
-def generate_combined_report(df_dict, report_type):
+def generate_report(df_dict, report_type):
     fig, ax = plt.subplots(figsize=(10, 6))
 
     for city, df in df_dict.items():
@@ -141,4 +141,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.city:
-        analyze_multiple_cities(args.report, args.format, args.city)
+        analyze_cities(args.report, args.format, args.city)
