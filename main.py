@@ -109,7 +109,7 @@ def analyze_cities_with_map(cities):
                     "humidity": humidity
                 })
 
-    map_center = [city_data[0]['lat'], city_data[0]['lon']]  # 以第一个城市为中心
+    map_center = [city_data[0]['lat'], city_data[0]['lon']] 
     weather_map = folium.Map(location=map_center, zoom_start=3)
 
     for city_info in city_data:

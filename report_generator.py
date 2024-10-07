@@ -49,7 +49,7 @@ def export_to_csv(df_dict, cities):
         combined_df = pd.concat([combined_df, df_copy])
 
     combined_df.to_csv(filename, index=False)
-    print(f"Merged CSV exported to：{filename}")
+    print(f"CSV exported to：{filename}")
 
 def export_to_excel(df_dict, cities):
     filename = f"weather_data_{'_'.join(cities)}.xlsx"
@@ -64,7 +64,7 @@ def export_to_excel(df_dict, cities):
     with pd.ExcelWriter(filename) as writer:
         combined_df.to_excel(writer, index=False)
 
-    print(f"Merged Excel exported to：{filename}")
+    print(f"Excel exported to：{filename}")
 
 def export_to_json(df_dict, cities):
     filename = f"weather_data_{'_'.join(cities)}.json"
@@ -78,7 +78,7 @@ def export_to_json(df_dict, cities):
 
     combined_df.to_json(filename, orient='records', lines=True)
 
-    print(f"Merged JSON exported to：{filename}")   
+    print(f"JSON exported to：{filename}")   
 
 def generate_comparison_report(df_dict, column):
     """Generates a comparison report"""
